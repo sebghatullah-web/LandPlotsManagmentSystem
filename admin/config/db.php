@@ -1,0 +1,15 @@
+<?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "lp";
+
+$conn = new mysqli($host, $user, $pass, $db);
+
+if($conn->connect_error){
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// ✅ Enable UTF-8 encoding for Persian support
+$conn->set_charset("utf8mb4");
+?>
